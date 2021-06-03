@@ -12,3 +12,8 @@ class Brand extends Model
         'nationality',
     ];
 }
+
+public function pilots() {
+
+    return $this -> hasMany(Car::class);
+}

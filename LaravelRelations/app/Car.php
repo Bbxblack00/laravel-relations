@@ -11,5 +11,6 @@ class Car extends Model
         'name',
         'model',
         'kw',
+        'brand_id',
     ];
 }
