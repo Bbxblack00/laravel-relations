@@ -21,6 +21,9 @@ class CreatePilotsTable extends Migration
             $table->string('nationality', 128);
             $table->date('date_of_birth');
 
+            // $table->foreignId('car_id')->constrained();
+            $table -> bigInteger('car_id') -> unsigned() -> index();
+
             $table->timestamps();
         });
     }

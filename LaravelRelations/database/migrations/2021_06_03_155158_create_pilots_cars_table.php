@@ -15,6 +15,10 @@ class CreatePilotsCarsTable extends Migration
     {
         Schema::create('pilots_cars', function (Blueprint $table) {
             $table->id();
+
+            $table->foreignId('car_id')->constrained();
+            $table->foreignId('pilot_id')->constrained();
+
             $table->timestamps();
         });
     }

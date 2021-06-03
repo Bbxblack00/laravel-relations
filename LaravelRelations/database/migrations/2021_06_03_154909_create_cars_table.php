@@ -16,9 +16,12 @@ class CreateCarsTable extends Migration
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name', 128);
-            $table->string('model', 128);
-            $table->integer('kw', 128);
+            $table->string('name');
+            $table->string('model');
+            $table->integer('kw');
+
+            // $table->foreignId('brand_id')->constrained('brands');
+            $table -> bigInteger('brand_id') -> unsigned() -> index();
 
             $table->timestamps();
         });
